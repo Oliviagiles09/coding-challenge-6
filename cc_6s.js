@@ -86,3 +86,17 @@ let applyBulkDiscount = (orders, discountedFunction) => {
 };
 
 applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
+
+// Task 7 
+
+function crateExpenseTracker() {
+  let totalExpenses = 0;
+  return function(expense) {
+    totalExpenses += expenses;
+    return 'Total Expense: $${totalExpenses}'
+  };
+};
+
+let tracker = createExpenseTracker();
+consol.log(tracker(200));
+consol.log(tracker(150));
