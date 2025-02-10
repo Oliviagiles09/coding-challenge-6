@@ -40,3 +40,28 @@ const calculateBonus = (salary, performanceRating) => {
 
 calculateBonus(5000, "Excellent");
 calculateBonus(7000, "Good");
+
+// Task 4 
+
+const calculateSubscriptionCost = (plan, months, discount = 0) => {
+  let rate;
+  if (plan === "Basic") {
+    rate = 10;
+  } else if (plan === "Premium") {
+    rate = 20;
+  } else if (plan === "Enterprise") {
+    rate = 50;
+  } else {
+    consol.log("Invalid Plan.");
+  }
+  let totalCost = rate * months;
+
+  if (discount > 0) {
+    totalCost -= (totalCost * discount) / 100;
+  }
+
+  consol.log('Total Cost: $${totalCost}');
+};
+
+calculateSubscriptionCost("Basic", 6,10);
+calculateSubscriptionCost("Premium", 12, 0);
