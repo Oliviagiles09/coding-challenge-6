@@ -21,3 +21,22 @@ let calculateSalesTax = function(amount, taxRate) {
 
 consol.log("Sales Tax: $", calculateSalesTax(100, 0.07));
 consol.log("Sales Tax: $", calculateSalesTax(500, 0.1));
+
+// Task 3
+
+const calculateBonus = (salary, performanceRating) => {
+  let bonus = 0;
+
+  if(performanceRating === "Excellent") {
+    bonus = salary * 0.20;
+  } else if (performanceRating === "Good") {
+    bonus = salary * 0.10;
+  } else if (performanceRating === "Average") {
+    bonus = salary * 0.05;
+  }
+
+  consol.log('Bonus: $${bonus}');
+};
+
+calculateBonus(5000, "Excellent");
+calculateBonus(7000, "Good");
