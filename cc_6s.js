@@ -100,3 +100,18 @@ function crateExpenseTracker() {
 let tracker = createExpenseTracker();
 consol.log(tracker(200));
 consol.log(tracker(150));
+
+// Task 8 
+
+function calculateYearsToPromotion(employeeLevel) {
+  if (employeeLevel >= 10) {
+    return 0;
+  };
+
+let years = (10 - employeeLevel) * 2;
+
+return 'Years to Level 10: ${years}';
+};
+
+consol.log(calculateYearsToPromotion(7));
+consol.log(calculateYearsToPromotion(5));
