@@ -76,3 +76,13 @@ let convertCurrency = function(amount, exchangeRate) {
 consol.log('Converted Currency 1: $${convertCurrency(100, 1.1)}');
 consol.log('Converted Currency 2: $${convertCurrency(250, 0.85)}');
 
+// Task 6 
+
+let order = [200, 600, 1200, 450, 800];
+
+let applyBulkDiscount = (orders, discountedFunction) => {
+  let discountedOrders = orders.map(discountedFunction);
+  consol.log("Updated Orders:", discountedOrders)
+};
+
+applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
